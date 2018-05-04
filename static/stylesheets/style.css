@@ -1,0 +1,51 @@
+   
+        .circleBase {
+            border-radius: 50%;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+        }
+
+        .type2 {
+            width: 75px;
+            height: 75px;
+            border: 3px solid #000;
+        }
+
+        #board{
+            background-color:brown;
+            height:100%;
+            width:90%;
+            border:5px solid black;
+            padding:20px;
+            margin: 0 auto;
+           }
+        .wrapper{
+            text-align:center;
+            background:black;
+            padding:20px;
+            height:100%;
+            width:40%;
+            margin: 0 auto;
+        }
+           .red {
+                background-color: red;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .green {
+                background-color: green;
+            }
+            .teal {
+                background-color: teal;
+            }
+            .tan {
+                background-color: tan;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .gray {
+                background-color: gray;
+            }
+                    
+        

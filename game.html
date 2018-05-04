@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Stomple</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+    .circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+        }
+
+        .type1 {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border: 3px solid red;
+        }
+        .type2 {
+            width: 75px;
+            height: 75px;
+            /* background: #ccc; */
+            border: 3px solid #000;
+        }
+        .type3 {
+            width: 500px;
+            height: 500px;
+            background: aqua;
+            border: 30px solid blue;
+        }
+        .wrap{
+            background-color: bisque;
+            border:2px solid black;
+            height:20px;
+            width:20px;
+        }
+        #board{
+            background-color:brown;
+            height:50%;
+            width:50%;
+            border:5px solid black;
+           }
+           .red {
+                background-color: red;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .green {
+                background-color: green;
+            }
+            .teal {
+                background-color: teal;
+            }
+            .tan {
+                background-color: tan;
+            }
+            .blue {
+                background-color: blue;
+            }
+                    
+        </style>
+
+        <script>
+            var colors = ['red', 'blue', 'green', 'teal', 'yellow', 'tan'];
+            $(document).ready(function(){
+            var html_str='';
+            html_str+="<table>"
+            for(var i=0;i<7;i++){
+                html_str+="<tr>"
+                for(var j=0;j<7;j++){
+                    col=colors[Math.floor(Math.random() * colors.length)];
+                    console.log(col);
+                    html_str+="<td><div class='circleBase type2 "+col+"'></div></td>"
+                }
+                html_str+="</tr>"
+            }
+            html_str+="</table>"
+            $('#board').html(html_str);
+        })
+        </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="board">
+
+        </div>
+        
+    </div>
+</body>
+</html>
